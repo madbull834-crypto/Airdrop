@@ -8,30 +8,78 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <style>
-        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; color: white; }
-        .card { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: none; }
-        .btn-follow { background: #1DA1F2; border: none; }
-        .btn-telegram { background: #0088cc; border: none; }
-        .logo { max-width: 160px; height: auto; margin: 0 auto 20px; display: block; filter: drop-shadow(0 8px 15px rgba(0,0,0,0.4)); border-radius: 12px; }
+        body {
+            background: linear-gradient(135deg, #0a0a23 0%, #1a1a3e 100%);
+            min-height: 100vh;
+            color: #e0e7ff;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .logo {
+            max-width: 170px;
+            height: auto;
+            margin: 0 auto 25px;
+            display: block;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+        }
+        .btn-follow { 
+            background: #1DA1F2; 
+            border: none;
+            font-weight: 600;
+        }
+        .btn-telegram { 
+            background: #0088cc; 
+            border: none;
+            font-weight: 600;
+        }
+        .btn-success {
+            background: #10b981;
+            border: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 14px;
+        }
+        .btn-success:hover {
+            background: #059669;
+        }
+        h1 {
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+        .lead {
+            color: #94a3b8;
+        }
+        .form-check-label {
+            color: #cbd5e1;
+        }
+        .small {
+            color: #64748b;
+        }
     </style>
 </head>
 <body class="d-flex align-items-center py-5">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6">
-                <div class="card p-4 shadow-lg">
-                    <div class="text-center mb-4">
+                <div class="card p-5 shadow-lg">
+                    <div class="text-center mb-5">
                         <img src="https://raw.githubusercontent.com/madbull834-crypto/Airdrop/main/logo.jpg" 
                              alt="Mad Bull Logo" class="logo">
-                        <h1 class="display-4 fw-bold">Mad Bull Airdrop</h1>
-                        <p class="lead">Claim your free tokens now!</p>
+                        <h1 class="display-4">Mad Bull Airdrop</h1>
+                        <p class="lead">Claim your free tokens now</p>
                     </div>
 
                     <!-- Step 1 -->
                     <div class="mb-4">
-                        <h5><i class="fab fa-twitter me-2"></i>Step 1: Follow on X (Twitter)</h5>
-                        <a href="https://x.com/mad_bull9" target="_blank" 
-                           onclick="markTwitterClicked()" 
+                        <h5 class="mb-3"><i class="fab fa-twitter me-2"></i>Step 1: Follow on X (Twitter)</h5>
+                        <a href="https://x.com/mad_bull9" target="_blank" onclick="markTwitterClicked()" 
                            class="btn btn-follow btn-lg w-100 mb-3">
                             <i class="fab fa-twitter"></i> Follow @mad_bull9
                         </a>
@@ -39,18 +87,17 @@
 
                     <!-- Step 2 -->
                     <div class="mb-4">
-                        <h5><i class="fab fa-telegram-plane me-2"></i>Step 2: Join Telegram</h5>
-                        <a href="https://t.me/mad_bull9" target="_blank" 
-                           onclick="markTelegramClicked()" 
+                        <h5 class="mb-3"><i class="fab fa-telegram-plane me-2"></i>Step 2: Join Telegram</h5>
+                        <a href="https://t.me/mad_bull9" target="_blank" onclick="markTelegramClicked()" 
                            class="btn btn-telegram btn-lg w-100 mb-3">
                             <i class="fab fa-telegram-plane"></i> Join @mad_bull9
                         </a>
                     </div>
 
                     <!-- Step 3 -->
-                    <h5><i class="fas fa-wallet me-2"></i>Step 3: Submit Wallet</h5>
+                    <h5 class="mb-3"><i class="fas fa-wallet me-2"></i>Step 3: Submit Wallet</h5>
                     
-                    <div class="mb-3 form-check">
+                    <div class="mb-4 form-check">
                         <input type="checkbox" class="form-check-input" id="followed">
                         <label class="form-check-label" for="followed">
                             I confirm I have followed both accounts
@@ -58,10 +105,10 @@
                     </div>
 
                     <button id="claimBtn" onclick="openGoogleForm()" class="btn btn-success btn-lg w-100" disabled>
-                        <i class="fas fa-gift"></i> Claim Airdrop
+                        <i class="fas fa-gift me-2"></i> Claim Airdrop
                     </button>
 
-                    <p class="text-center small mt-3 text-white-50">
+                    <p class="text-center small mt-4">
                         You must click both follow buttons + check the box to unlock the form
                     </p>
                 </div>
